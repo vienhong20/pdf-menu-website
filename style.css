@@ -1,4 +1,4 @@
-/* General Page Styling */
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -8,34 +8,32 @@ body {
   }
   
   h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 2rem;
   }
   
-  /* PDF Container */
   .pdf-container {
     max-width: 1000px;
     margin: auto;
     background: white;
     padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
   
   .pdf-container iframe {
     width: 100%;
-    height: 90vh; /* Responsive */
-    min-height: 600px;
+    height: 80vh;
     border: none;
   }
   
-  /* Responsive Tweaks */
+  /* Mobile and responsive tweaks */
   @media (max-width: 768px) {
     h1 {
       font-size: 1.5rem;
     }
   
     .pdf-container iframe {
-      height: 80vh;
+      height: 70vh;
     }
   }
   
@@ -45,47 +43,71 @@ body {
     }
   
     .pdf-container iframe {
-      height: 70vh;
+      height: 60vh;
     }
   }
   
-  /* Social Icon Footer */
+  /* Desktop vs Mobile Intro */
+  .desktop-intro {
+    display: block;
+  }
+  
+  .mobile-intro {
+    display: none;
+  }
+  
+  /* On mobile, swap visibility */
+  @media (max-width: 768px) {
+    .desktop-intro {
+      display: none;
+    }
+  
+    .mobile-intro {
+      display: block;
+    }
+  }
+  
+  /* Mobile/Desktop Display for PDF/Menu Section */
+  .mobile-only {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+    
+    .mobile-only {
+      display: block;
+    }
+  }
+  
+  /* Social media icons */
   .social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     background-color: black;
     color: white;
     width: 50px;
     height: 50px;
+    line-height: 50px;
     margin: 0 10px;
     border-radius: 50%;
     font-size: 24px;
     text-align: center;
     transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none;
-  }
-  
-  .social-icon i {
-    font-size: 24px;
   }
   
   .social-icon:hover {
-    background-color: #D686B5; /* Posh pink hover color */
+    background-color: #D686B5; /* Posh pink hover */
     transform: scale(1.1);
   }
-  /* Hide mobile intro by default */
-.mobile-intro {
-    display: none;
+  
+  /* Call Now Button Styling */
+  section a {
+    transition: background-color 0.3s, transform 0.3s;
   }
   
-  /* Show mobile intro, hide desktop intro on small screens */
-  @media (max-width: 768px) {
-    .desktop-intro {
-      display: none;
-    }
-    
-    .mobile-intro {
-      display: block;
-    }
+  section a:hover {
+    background-color: #c86aa2;
+    transform: scale(1.05);
   }
