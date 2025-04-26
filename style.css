@@ -110,4 +110,16 @@ body {
   section a:hover {
     background-color: #c86aa2;
     transform: scale(1.05);
+  }/* Default iframe size */
+.pdf-container iframe {
+    width: 100%;
+    height: 80vh; /* desktop */
+    border: none;
+  }
+  
+  /* Adjust on smaller devices */
+  @media (max-width: 768px) {
+    .pdf-container iframe {
+      height: 90vh; /* mobile */
+    }
   }
