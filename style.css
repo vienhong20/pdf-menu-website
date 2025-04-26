@@ -45,3 +45,18 @@ h1 {
         height: 60vh;
     }
 }
+/* Default: hide mobile-only stuff */
+.mobile-only {
+    display: none;
+  }
+  
+  /* Only show mobile-only and hide desktop-only on smaller screens */
+  @media (max-width: 768px) {
+    .desktop-only {
+      display: none;
+    }
+    
+    .mobile-only {
+      display: block;
+    }
+  }
