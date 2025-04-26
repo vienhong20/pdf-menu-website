@@ -74,3 +74,18 @@ body {
     background-color: #D686B5; /* Posh pink hover color */
     transform: scale(1.1);
   }
+  /* Hide mobile intro by default */
+.mobile-intro {
+    display: none;
+  }
+  
+  /* Show mobile intro, hide desktop intro on small screens */
+  @media (max-width: 768px) {
+    .desktop-intro {
+      display: none;
+    }
+    
+    .mobile-intro {
+      display: block;
+    }
+  }
