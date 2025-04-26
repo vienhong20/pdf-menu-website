@@ -6,36 +6,51 @@
   <title>Posh Nail Lounge Menu</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Animation CSS -->
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <h1>Welcome to Our Services Menu</h1>
+  <h1 class="fade-in">Welcome to Our Services Menu</h1>
 
-  <!-- Introduction Section -->
+  <!-- Introduction Section with Animation -->
   <section style="text-align: center; margin-bottom: 30px;">
-    <p class="desktop-intro" style="font-size: 1.2rem; max-width: 700px; margin: auto; padding: 10px;">
+    <p class="desktop-intro fade-in" style="font-size: 1.2rem; max-width: 700px; margin: auto; padding: 10px;">
       At <strong>Posh Nail Lounge</strong>, we have proudly served our community for over <strong>10 years</strong>, delivering exceptional nail care and beauty services with a commitment to quality and excellence.  
       Our experienced team is dedicated to creating a luxurious and relaxing environment where you can unwind, refresh, and feel your best.  
       We invite you to explore our premium service menu below and experience the personalized care that has earned the loyalty of our valued clients year after year.  
       We look forward to welcoming you to Posh Nail Lounge — where beauty and comfort come together.
     </p>
 
-    <p class="mobile-intro" style="font-size: 1.1rem; max-width: 700px; margin: auto; padding: 10px;">
+    <p class="mobile-intro fade-in" style="font-size: 1.1rem; max-width: 700px; margin: auto; padding: 10px;">
       Welcome to <strong>Posh Nail Lounge</strong> — proudly offering luxurious nail care and beauty services for over <strong>10 years</strong>.  
       Explore our menu below and experience the comfort, care, and excellence we are known for.
     </p>
   </section>
 
-  <!-- PDF Display for ALL screens -->
-  <div class="pdf-container">
-    <iframe src="pdf/Menu.pdf" frameborder="0" width="100%" height="800px"></iframe>
+  <!-- PDF Viewer from Google Drive -->
+  <div class="pdf-container fade-in">
+    <iframe src="https://drive.google.com/file/d/12MR4MhwtC6cKxS00ioz-3ZgHcoGn8dC9/preview" 
+      frameborder="0" width="100%" height="800px" allow="autoplay"></iframe>
   </div>
 
-  <!-- REMOVE mobile-only button -->
-
   <!-- Call Now Buttons -->
-  <section style="margin: 40px 0;">
+  <section class="fade-in" style="margin: 40px 0;">
     <h2 style="margin-bottom: 20px;">Book Your Appointment</h2>
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
       <a href="tel:9545339391" style="background-color: #D686B5; color: white; padding: 15px 25px; border-radius: 8px; text-decoration: none; font-size: 1.1rem;">
